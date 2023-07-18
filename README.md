@@ -1,2 +1,1 @@
-# pseudo-classes-selector
-pseudo-classes selector training
+# pseudo-classes-selector training

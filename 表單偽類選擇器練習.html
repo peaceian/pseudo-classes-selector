@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表單偽類選擇器練習</title>
+    <style>
+      fieldset {background-color: #eeeeee;width: 500px;border-radius: 10px;padding: 20px;}
+      
+      legend {
+        background-color: rgb(99, 99, 99);
+        color: rgb(23, 23, 23);
+        padding: 5px;}
+      
+      input {margin: 5px;border-radius: 20px;}
+      h1,caption,legend,label{color: rgb(16, 16, 16);
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;background-color:bisque;
+        border-radius:10px;border-color:rgb(18, 18, 18);margin: 10px;}
+
+      body {background-image:url("HP pattern .png");background-repeat: repeat;}
+
+      input.checked:checked {background-color: blueviolet;}
+    </style>
+    
+    
+</head>
+<body>
+    <hr>
+<h1>label test</h1><!--label值必須要和id值相同-->
+<form>
+    <fieldset>
+        <legend>個人基本資料</legend>
+        <label for="name">姓名:</label>
+        <input type="text" id="name" required="1" placeholder="請輸入姓名">
+        <br>
+        <label for="birthday">生日:</label>
+        <input type="date" id="birthday" required="1">
+        <br>
+        <label for="address">地址:</label>
+        <input type="text" id="address" required="1" placeholder="請輸入地址">
+        <br>
+        <label for="password">密碼:</label>
+        <input type="password" id="password" required="1" size="20" maxlength="15" placeholder="請輸入密碼">
+        <br>
+        <label for="radio">性別:</label><!--二選一時用radio-->
+        <input type="radio" id="radio" value="male">男
+        <input type="radio" id="radio" value="female">女
+        <br>
+        <legend>喜愛的系統</legend>
+        <label for="checkbox">請選擇以下喜愛的選項（可複選）</label><br><!--多數選擇表單時用checkbox-->
+        <input type="checkbox" id="checkbox" value="Android">Android
+        <input type="checkbox" id="checkbox" value="iOS">iOS
+        <br>
+        <legend>購買過的蘋果智慧型手機</legend>
+        <label for="checkbox">請選擇以下曾經使用過的智慧型手機（可複選）</label><br>
+        <input type="checkbox" id="checkbox" class="checked" value="iPhone7" name="info[]">iPhone 7
+        <input type="checkbox" id="checkbox" class="checked" value="iPhone7+" name="info[]">iPhone 7+
+        <input type="checkbox" id="checkbox" class="checked" value="iPhone8" name="info[]">iPhone 8
+        <input type="checkbox" id="checkbox" class="checked" value="iPhone8+" name="info[]">iPhone 8+<br>
+        <input type="checkbox" id="checkbox" class="checked" value="iPhoneX" name="info[]">iPhone X
+        <input type="checkbox" id="checkbox" class="checked" value="iPhoneXS" name="info[]">iPhone XS
+        <input type="checkbox" id="checkbox" class="checked" value="iPhoneXR"name="info[]">iPhone XR
+        <input type="checkbox" id="checkbox" class="checked" value="iPhone11"name="info[]">iPhone 11<br>
+        <input type="checkbox" id="checkbox" class="checked" value="iPhone11 Pro"name="info[]">iPhone 11 Pro
+        <input type="checkbox" id="checkbox" class="checked" value="iPhone11 Pro Max"name="info[]">iPhone 11 Pro Max
+        <input type="checkbox" id="checkbox" class="checked" value="iPhoneSE"name="info[]">iPhone SE
+        <input type="checkbox" id="checkbox" class="checked" value="iPhone12 Mini"name="info[]">iPhone 12 Mini<br>
+        <input type="checkbox" id="checkbox" class="checked" value="iPhone12 Pro"name="info[]">iPhone 12 Pro
+        <input type="checkbox" id="checkbox" class="checked" value="iPhone12 Pro Max"name="info[]">iPhone 12 Pro Max
+        <input type="checkbox" id="checkbox" class="checked" value="iPhone13 Pro"name="info[]">iPhone 13 Pro
+        <input type="checkbox" id="checkbox" class="checked" value="iPhone13 Pro Max"name="info[]">iPhone 13 Pro Max<br>
+        <input type="checkbox" id="checkbox" class="checked" value="iPhone14"name="info[]">iPhone 14
+        <input type="checkbox" id="checkbox" class="checked" value="iPhone14 Plus"name="info[]">iPhone 14 Plus
+        <input type="checkbox" id="checkbox" class="checked" value="iPhone14 Pro"name="info[]">iPhone 14 Pro
+        <input type="checkbox" id="checkbox" class="checked" value="iPhone14 Pro Max"name="info[]">iPhone14 Pro Max
+        <br>
+        <input type="reset">
+        <br>
+        <legend>請將以下要求檔案上傳</legend><br>
+        <input type="file" accept="image/*,.pdf">上傳.jepg、.png、.jpg或.pdf檔<br><!--多種類型用","分開-->
+        <input type="file" accept="audio/*">上傳音檔<br>
+        <input type="file" accept="video/*">上傳影片檔<br>
+        <input type="submit" value="提交">
+        <br>
+        <a noopener href="https://zh.m.wikipedia.org/zh-hant/IPhone" title="iphone series" target="_blank"><img src="C:\Users\ian\web\iphone14pro.svg.png" alt="iphone14pro" width="200" height="406"></a><!--use a href linkage with the img making the link web effect.-->
+        <br>
+        <input type="button" id="iphone14pro" value="iphone14pro">
+    
+    </fieldset>
+</form>
+</body>
+</html>
